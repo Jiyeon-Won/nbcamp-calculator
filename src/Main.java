@@ -1,11 +1,22 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
 
-        int[] arrNum = new int[10];
-        int index = 0;
+
+//        for (int i = 0; i < 8; i++) {
+//            if (queue.size() >= 5) {
+//                queue.poll();
+//            }
+//            queue.add(i);
+//        }
+//
+//        while (!queue.isEmpty()) {
+//            System.out.println(queue.poll());
+//        }
+
+        Scanner sc = new Scanner(System.in);
+        Queue<Integer> queue = new LinkedList<>();
         do {
             System.out.print("첫 번째 숫자를 입력하세요: ");
             int num1 = sc.nextInt();
@@ -40,11 +51,14 @@ public class Main {
                     break;
             }
             System.out.println("결과: " + result);
-            arrNum[index++] = result;
+            if (queue.size() >= 10) {
+                queue.poll();
+            }
+            queue.add(result);
 
             System.out.println("더 계산하시려면 아무거나 입력하세요 (exit 입력 시 종료)");
         } while (!sc.next().equals("exit"));
-        for (int num : arrNum) {
+        for (int num : queue) {
             System.out.println("배열에 저장된 값: " + num);
         }
     }
