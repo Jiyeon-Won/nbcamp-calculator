@@ -4,13 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e18fd926-d530-41a8-953f-15ae3ae9b72d" name="Changes" comment="Level 1 - 7">
+    <list default="true" id="e18fd926-d530-41a8-953f-15ae3ae9b72d" name="Changes" comment="Level 2 - 4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -32,8 +41,9 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Level2",
     "last_opened_file_path": "C:/_java_project/nbcamp",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -118,7 +128,47 @@
       <option name="project" value="LOCAL" />
       <updated>1713844467347</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Level 1 complete">
+      <option name="closed" value="true" />
+      <created>1713848768900</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1713848768900</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Level 2 - 1">
+      <option name="closed" value="true" />
+      <created>1713871598140</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1713871598140</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Level 2 - 2">
+      <option name="closed" value="true" />
+      <created>1713871905883</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1713871905883</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Level 2 - 3">
+      <option name="closed" value="true" />
+      <created>1713872325796</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1713872325796</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Level 2 - 4">
+      <option name="closed" value="true" />
+      <created>1713872462068</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1713872462068</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +206,11 @@
     <MESSAGE value="Level 1 - 5" />
     <MESSAGE value="Level 1 - 6" />
     <MESSAGE value="Level 1 - 7" />
-    <option name="LAST_COMMIT_MESSAGE" value="Level 1 - 7" />
+    <MESSAGE value="Level 1 complete" />
+    <MESSAGE value="Level 2 - 1" />
+    <MESSAGE value="Level 2 - 2" />
+    <MESSAGE value="Level 2 - 3" />
+    <MESSAGE value="Level 2 - 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Level 2 - 4" />
   </component>
 </project>
