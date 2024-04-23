@@ -26,6 +26,10 @@ public class Calculator {
         return result;
     }
 
+    public void removeResult() {
+        list.remove(0);
+    }
+
     public List<Integer> getList() {
         return list;
     }
