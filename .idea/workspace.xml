@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e18fd926-d530-41a8-953f-15ae3ae9b72d" name="Changes" comment="Level 1 - 6">
+    <list default="true" id="e18fd926-d530-41a8-953f-15ae3ae9b72d" name="Changes" comment="Level 1 - 7">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -53,7 +53,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1693146062831</updated>
-      <workItem from="1713837649677" duration="5915000" />
+      <workItem from="1713837649677" duration="6195000" />
     </task>
     <task id="LOCAL-00001" summary="세팅">
       <option name="closed" value="true" />
@@ -111,7 +111,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713843937223</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Level 1 - 7">
+      <option name="closed" value="true" />
+      <created>1713844467347</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1713844467347</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,6 +156,7 @@
     <MESSAGE value="Level 1 - 4" />
     <MESSAGE value="Level 1 - 5" />
     <MESSAGE value="Level 1 - 6" />
-    <option name="LAST_COMMIT_MESSAGE" value="Level 1 - 6" />
+    <MESSAGE value="Level 1 - 7" />
+    <option name="LAST_COMMIT_MESSAGE" value="Level 1 - 7" />
   </component>
 </project>

@@ -37,7 +37,6 @@ public class Main {
                     result = num1 % num2;
                     break;
             }
-            System.out.println("결과: " + result);
             list.add(result);
 
             System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제)");
@@ -45,10 +44,14 @@ public class Main {
                 list.remove(0);
             }
 
+            System.out.println("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회)");
+            if ("inquiry".equals(sc.next())) {
+                for (int num : list) {
+                    System.out.println("배열에 저장된 값: " + num);
+                }
+            }
+
             System.out.println("더 계산하시려면 아무거나 입력하세요 (exit 입력 시 종료)");
         } while (!sc.next().equals("exit"));
-        for (int num : list) {
-            System.out.println("배열에 저장된 값: " + num);
-        }
     }
 }
