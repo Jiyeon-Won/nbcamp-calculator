@@ -19,7 +19,7 @@ public class App {
 
             System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제)");
             if ("remove".equals(sc.next())) {
-                list.remove(0);
+                calculator.removeResult();
             }
             calculator.setList(list);
 
