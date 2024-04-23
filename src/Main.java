@@ -12,6 +12,25 @@ public class Main {
         System.out.print("사칙연산 기호를 입력하세요: ");
         char ch = sc.next().charAt(0);
 
-        System.out.printf("num1 : %d, num2 : %d, ch : %c", num1, num2, ch);
+        int result = 0;
+        switch (ch) {
+            case '+':
+                result = num1 + num2;
+                break;
+            case '-':
+                result = num1 - num2;
+                break;
+            case '*':
+                result = num1 * num2;
+                break;
+            case '/':
+                if (num2 == 0) {
+                    System.out.println("나눗셈 연산에서 분모(두번째 정수)에 0이 입력될 수 없습니다.");
+                    break;
+                }
+                result = num1 / num2;
+                break;
+        }
+        System.out.println("결과: " + result);
     }
 }
