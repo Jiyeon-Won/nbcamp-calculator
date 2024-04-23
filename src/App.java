@@ -25,9 +25,7 @@ public class App {
 
             System.out.println("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회)");
             if ("inquiry".equals(sc.next())) {
-                for (int num : calculator.getList()) {
-                    System.out.println("배열에 저장된 값: " + num);
-                }
+                calculator.inquiryResult();
             }
 
             System.out.println("더 계산하시려면 아무거나 입력하세요 (exit 입력 시 종료)");
