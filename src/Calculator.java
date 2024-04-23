@@ -30,6 +30,12 @@ public class Calculator {
         list.remove(0);
     }
 
+    public void inquiryResults() {
+        for (int data : getList()) {
+            System.out.println("컬렉션에 저장된 값: " + data);
+        }
+    }
+
     public List<Integer> getList() {
         return list;
     }
