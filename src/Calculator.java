@@ -2,7 +2,11 @@ import java.util.*;
 
 public class Calculator {
 
-    private List<Integer> list = new ArrayList<>();
+    private List<Integer> list;
+
+    public Calculator(List<Integer> list) {
+        this.list = list;
+    }
 
     public int calculate(int num1, int num2, char operation) throws Exception {
         int result = 0;
