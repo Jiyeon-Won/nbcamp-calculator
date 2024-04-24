@@ -24,7 +24,23 @@ public class App {
                 System.out.print("사칙연산 기호를 입력하세요: ");
                 char operation = sc.next().charAt(0);
 
-                cal2.calculate(num1, num2, operation);
+                switch (operation) {
+                    case '+':
+                        cal2.calculate(num1, num2, new AddOperator());
+                        break;
+                    case '-':
+                        cal2.calculate(num1, num2, new SubtractOperator());
+                        break;
+                    case '*':
+                        cal2.calculate(num1, num2, new MultiplyOperator());
+                        break;
+                    case '/':
+                        cal2.calculate(num1, num2, new DivideOperator());
+                        break;
+                    case '%':
+                        cal2.calculate(num1, num2, new ModOperator());
+                        break;
+                }
 
                 System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제)");
                 if ("remove".equals(sc.next())) {
