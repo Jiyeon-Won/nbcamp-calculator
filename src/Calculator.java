@@ -1,23 +1,22 @@
 import java.util.*;
 
-public class Calculator {
+public abstract class Calculator {
 
     // static을 사용해 인스턴스를 하나만 생성하게 한다.
     // final을 사용해 수정할 수 없게 만들어서 메모리 낭비를 막는다. (싱글톤)
-    private static final Calculator instance = new Calculator();
-
+//    private static final Calculator instance = new Calculator();
+    private ArrayList<Double> calList;
     private ArrayList<Double> circleAreas;
-    private List<Integer> calList;
 
-    private Calculator() {
+    protected Calculator() {
         circleAreas = new ArrayList<>();
         calList = new ArrayList<>();
     }
 
     // 항상 동일한 인스턴스를 반환
-    public static Calculator getInstance() {
-        return instance;
-    }
+//    protected static Calculator getInstance() {
+//        return instance;
+//    }
 
     public double calculateCircleArea(int radius) {
         return radius * radius * Math.PI;
@@ -42,8 +41,8 @@ public class Calculator {
         this.circleAreas = circleAreas;
     }
 
-    public int calculate(int num1, int num2, char operation) throws Exception {
-        int result = 0;
+    public double calculate(int num1, int num2, char operation) throws Exception {
+        double result = 0;
         switch (operation) {
             case '+':
                 result = num1 + num2;
@@ -70,16 +69,16 @@ public class Calculator {
     }
 
     public void inquiryResults() {
-        for (int data : getCalList()) {
+        for (double data : getCalList()) {
             System.out.println("컬렉션에 저장된 값: " + data);
         }
     }
 
-    public List<Integer> getCalList() {
+    public List<Double> getCalList() {
         return calList;
     }
 
-    public void setCalList(List<Integer> calList) {
+    public void setCalList(ArrayList<Double> calList) {
         this.calList = calList;
     }
 }

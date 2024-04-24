@@ -3,12 +3,13 @@ import java.util.*;
 public class App {
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
-        Calculator calculator = Calculator.getInstance();
+        Calculator calculator;
 
         do {
             System.out.println("1번 원의 넓이, 2번 사칙연산");
             char select = sc.next().charAt(0);
             if (select == '1') {
+                calculator = CircleCalculator.getInstance();
                 System.out.print("원의 반지름 입력: ");
                 int radius = sc.nextInt();
                 double circleArea = calculator.calculateCircleArea(radius);
@@ -16,6 +17,7 @@ public class App {
                 calculator.inquiryCircles();
             }
             if (select == '2') {
+                calculator = ArithmeticCalculator.getInstance();
                 System.out.print("첫 번째 숫자를 입력하세요: ");
                 int num1 = sc.nextInt();
                 System.out.print("두 번째 숫자를 입력하세요: ");
