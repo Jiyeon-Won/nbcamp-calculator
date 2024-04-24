@@ -1,25 +1,19 @@
 import java.util.*;
 
-public abstract class Calculator {
+public class Calculator {
 
-    // static을 사용해 인스턴스를 하나만 생성하게 한다.
-    // final을 사용해 수정할 수 없게 만들어서 메모리 낭비를 막는다. (싱글톤)
-//    private static final Calculator instance = new Calculator();
+    static final double PI = 3.14;
+
     private ArrayList<Double> calList;
     private ArrayList<Double> circleAreas;
 
-    protected Calculator() {
-        circleAreas = new ArrayList<>();
-        calList = new ArrayList<>();
+    public Calculator(ArrayList<Double> circleAreas, ArrayList<Double> calList) {
+        this.circleAreas = circleAreas;
+        this.calList = calList;
     }
 
-    // 항상 동일한 인스턴스를 반환
-//    protected static Calculator getInstance() {
-//        return instance;
-//    }
-
     public double calculateCircleArea(int radius) {
-        return radius * radius * Math.PI;
+        return radius * radius * PI;
     }
 
     public void saveCircle(double circleArea) {
