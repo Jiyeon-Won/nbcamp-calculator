@@ -2,10 +2,44 @@ import java.util.*;
 
 public class Calculator {
 
-    private List<Integer> list;
+    // static을 사용해 인스턴스를 하나만 생성하게 한다.
+    // final을 사용해 수정할 수 없게 만들어서 메모리 낭비를 막는다. (싱글톤)
+    private static final Calculator instance = new Calculator();
 
-    public Calculator(List<Integer> list) {
-        this.list = list;
+    private ArrayList<Double> circleAreas;
+    private List<Integer> calList;
+
+    private Calculator() {
+        circleAreas = new ArrayList<>();
+        calList = new ArrayList<>();
+    }
+
+    // 항상 동일한 인스턴스를 반환
+    public static Calculator getInstance() {
+        return instance;
+    }
+
+    public double calculateCircleArea(int radius) {
+        return radius * radius * Math.PI;
+    }
+
+    public void saveCircle(double circleArea) {
+        circleAreas.add(circleArea);
+    }
+
+    public void inquiryCircles() {
+        int index = 1;
+        for (double data : getCircleAreas()) {
+            System.out.println("저장된 원의 넓이 " + (index++) + "번째: " + data);
+        }
+    }
+
+    public ArrayList<Double> getCircleAreas() {
+        return circleAreas;
+    }
+
+    public void setCircleAreas(ArrayList<Double> circleAreas) {
+        this.circleAreas = circleAreas;
     }
 
     public int calculate(int num1, int num2, char operation) throws Exception {
@@ -27,24 +61,25 @@ public class Calculator {
                 result = num1 / num2;
                 break;
         }
+        calList.add(result);
         return result;
     }
 
     public void removeResult() {
-        list.remove(0);
+        calList.remove(0);
     }
 
     public void inquiryResults() {
-        for (int data : getList()) {
+        for (int data : getCalList()) {
             System.out.println("컬렉션에 저장된 값: " + data);
         }
     }
 
-    public List<Integer> getList() {
-        return list;
+    public List<Integer> getCalList() {
+        return calList;
     }
 
-    public void setList(List<Integer> list) {
-        this.list = list;
+    public void setCalList(List<Integer> calList) {
+        this.calList = calList;
     }
 }
