@@ -1,10 +1,14 @@
+import java.util.ArrayList;
+
 public class ArithmeticCalculator extends Calculator {
 
-    private static final ArithmeticCalculator instance = new ArithmeticCalculator();
-    private ArithmeticCalculator() {
+    public ArithmeticCalculator(ArrayList<Double> list) {
+        super(list);
     }
 
-    public static ArithmeticCalculator getInstance() {
-        return instance;
+    public double calculate(int num1, int num2, Operator operator) throws Exception {
+        double result = operator.operate(num1, num2);
+        addList(result);
+        return result;
     }
 }

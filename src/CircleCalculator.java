@@ -1,10 +1,14 @@
+import java.util.ArrayList;
+
 public class CircleCalculator extends Calculator {
 
-    private static final CircleCalculator instance = new CircleCalculator();
-    private CircleCalculator() {
+    static final double PI = 3.14;
+
+    public CircleCalculator(ArrayList<Double> list) {
+        super(list);
     }
 
-    public static CircleCalculator getInstance() {
-        return instance;
+    public double calculateCircleArea(int radius) {
+        return radius * radius * PI;
     }
 }
