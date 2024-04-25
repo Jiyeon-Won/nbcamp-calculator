@@ -7,6 +7,7 @@ public abstract class Calculator {
         this.list = list;
     }
 
+    // list 전체 출력
     public void inquiryList() {
         int index = 1;
         for (double data : getList()) {
@@ -14,10 +15,12 @@ public abstract class Calculator {
         }
     }
 
+    // list의 첫번째 데이터 삭제
     public void removeFirstData() {
         list.remove(0);
     }
 
+    // list에 추가
     public void addList(double data) {
         list.add(data);
     }

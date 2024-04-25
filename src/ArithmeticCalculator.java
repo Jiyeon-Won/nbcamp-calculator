@@ -1,3 +1,5 @@
+import operator.Operator;
+
 import java.util.ArrayList;
 
 public class ArithmeticCalculator extends Calculator {
