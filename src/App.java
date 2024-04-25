@@ -6,7 +6,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
         CircleCalculator cal1 = new CircleCalculator(new ArrayList<>());
-        ArithmeticCalculator cal2 = new ArithmeticCalculator(new ArrayList<>());
+        ArithmeticCalculator<Double> cal2 = new ArithmeticCalculator<>(new ArrayList<>());
 
         do {
             System.out.println("1번 원의 넓이, 2번 사칙연산");
@@ -22,11 +22,11 @@ public class App {
         } while (!sc.next().equals("exit"));
     }
 
-    private static void calculateArithmetic (Scanner sc, ArithmeticCalculator cal2) throws Exception {
+    private static void calculateArithmetic (Scanner sc, ArithmeticCalculator<Double> cal2) throws Exception {
         System.out.print("첫 번째 숫자를 입력하세요: ");
-        int num1 = sc.nextInt();
+        double num1 = sc.nextDouble();
         System.out.print("두 번째 숫자를 입력하세요: ");
-        int num2 = sc.nextInt();
+        double num2 = sc.nextDouble();
         System.out.print("사칙연산 기호를 입력하세요: ");
         char operation = sc.next().charAt(0);
 
