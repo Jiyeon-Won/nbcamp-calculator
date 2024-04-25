@@ -24,4 +24,11 @@ public class ArithmeticCalculator<T extends Number> extends Calculator {
         addList(result);
         return result;
     }
+
+    public void printValuesBiggerInput(T input) {
+        System.out.println(input + "보다 큰 값");
+        getList().stream()
+                .filter(value -> value > input.doubleValue())
+                .forEach(System.out::println);
+    }
 }

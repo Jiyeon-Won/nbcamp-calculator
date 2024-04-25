@@ -15,14 +15,14 @@ public class App {
                 calculateCircleArea(sc, cal1);
             }
             if (select == '2') {
-                calculateArithmetic (sc, cal2);
+                calculateArithmetic(sc, cal2);
             }
 
             System.out.println("더 계산하시려면 아무거나 입력하세요 (exit 입력 시 종료)");
         } while (!sc.next().equals("exit"));
     }
 
-    private static void calculateArithmetic (Scanner sc, ArithmeticCalculator<Double> cal2) throws Exception {
+    private static void calculateArithmetic(Scanner sc, ArithmeticCalculator<Double> cal2) throws Exception {
         System.out.print("첫 번째 숫자를 입력하세요: ");
         double num1 = sc.nextDouble();
         System.out.print("두 번째 숫자를 입력하세요: ");
@@ -41,6 +41,9 @@ public class App {
         if ("inquiry".equals(sc.next())) {
             cal2.inquiryList();
         }
+
+        System.out.println("입력한 값 보다 큰 값들 출력 (x 입력 시 조회안함)");
+        cal2.printValuesBiggerInput(sc.nextDouble());
     }
 
     private static void calculateCircleArea(Scanner sc, CircleCalculator cal1) {
