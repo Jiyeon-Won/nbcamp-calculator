@@ -1,5 +1,5 @@
 package operator;
 
-public interface Operator {
-    double operate(int num1, int num2) throws Exception;
+public interface Operator<T extends Number> {
+    double operate(T num1, T num2) throws Exception;
 }
