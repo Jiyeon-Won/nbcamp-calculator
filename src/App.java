@@ -41,7 +41,10 @@ public class App {
         }
 
         System.out.println("입력한 값 보다 큰 값들 출력 (x 입력 시 조회안함)");
-        cal2.printValuesBiggerInput(sc.nextDouble());
+        String input = sc.next();
+        if (!"x".equals(input)){
+            cal2.printValuesBiggerInput(Double.parseDouble(input));
+        }
     }
 
     private static void calculateCircleArea(Scanner sc, CircleCalculator cal1) {
