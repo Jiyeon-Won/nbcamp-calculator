@@ -1,7 +1,7 @@
 package operator;
 
 public class AddOperator<T extends Number> implements Operator<T> {
-    public double operate(T num1, T num2) throws Exception {
+    public double operate(T num1, T num2) {
         return num1.doubleValue() + num1.doubleValue();
 
 

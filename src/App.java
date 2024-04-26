@@ -1,5 +1,3 @@
-import operator.*;
-
 import java.util.*;
 
 public class App {
@@ -11,15 +9,15 @@ public class App {
         do {
             System.out.println("1번 원의 넓이, 2번 사칙연산");
             char select = sc.next().charAt(0);
-            if (select == '1') {
+            if ('1' == select) {
                 calculateCircleArea(sc, cal1);
             }
-            if (select == '2') {
+            if ('2' == select) {
                 calculateArithmetic(sc, cal2);
             }
 
             System.out.println("더 계산하시려면 아무거나 입력하세요 (exit 입력 시 종료)");
-        } while (!sc.next().equals("exit"));
+        } while (!"exit".equals(sc.next()));
     }
 
     private static void calculateArithmetic(Scanner sc, ArithmeticCalculator<Double> cal2) throws Exception {
