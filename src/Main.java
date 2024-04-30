@@ -3,7 +3,9 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        List<Integer> list = new ArrayList<>();
+
+        int[] arrNum = new int[10];
+        int index = 0;
         do {
             System.out.print("첫 번째 숫자를 입력하세요: ");
             int num1 = sc.nextInt();
@@ -37,18 +39,18 @@ public class Main {
                     result = num1 % num2;
                     break;
             }
-            list.add(result);
+            System.out.println("결과: " + result);
 
-            System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제)");
-            if ("remove".equals(sc.next())) {
-                list.remove(0);
-            }
-
-            System.out.println("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회)");
-            if ("inquiry".equals(sc.next())) {
-                for (int num : list) {
-                    System.out.println("배열에 저장된 값: " + num);
+            if (index == arrNum.length) {
+                for (int i = 0; i < arrNum.length - 1; i++) {
+                    arrNum[i] = arrNum[i + 1];
                 }
+                --index;
+            }
+            arrNum[index++] = result;
+
+            for (int num : arrNum) {
+                System.out.print(num + "  ");
             }
 
             System.out.println("더 계산하시려면 아무거나 입력하세요 (exit 입력 시 종료)");
