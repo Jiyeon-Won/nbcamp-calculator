@@ -16,11 +16,11 @@ public class App {
                 calculateArithmetic(sc, cal2);
             }
 
-            System.out.println("더 계산하시려면 아무거나 입력하세요 (exit 입력 시 종료)");
+            System.out.print("더 계산하시려면 아무거나 입력하세요 (exit 입력 시 종료)");
         } while (!"exit".equals(sc.next()));
     }
 
-    private static void calculateArithmetic(Scanner sc, ArithmeticCalculator<Double> cal2) throws Exception {
+    private static void calculateArithmetic(Scanner sc, ArithmeticCalculator<Double> cal2) {
         System.out.print("첫 번째 숫자를 입력하세요: ");
         double num1 = sc.nextDouble();
         System.out.print("두 번째 숫자를 입력하세요: ");
@@ -28,8 +28,15 @@ public class App {
         System.out.print("사칙연산 기호를 입력하세요: ");
         char operation = sc.next().charAt(0);
 
-        double calculate = cal2.calculate(num1, num2, OperatorType.setOperation(operation));
-        cal2.getList().add(calculate);
+        try {
+            double calculate = cal2.calculate(num1, num2, OperatorType.setOperation(operation));
+            cal2.getList().add(calculate);
+        } catch (IllegalArgumentException | ArithmeticException e) {
+            System.out.println();
+            System.out.println(e.getMessage());
+            System.out.println();
+            return;
+        }
 
         System.out.print("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제) ");
         if ("remove".equals(sc.next())) {

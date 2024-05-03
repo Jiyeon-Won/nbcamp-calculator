@@ -8,8 +8,8 @@ public class ArithmeticCalculator<T extends Number> extends Calculator {
         super(list);
     }
 
-    public T calculate(T num1, T num2, OperatorType type) throws Exception {
-        Operator<T> operator;
+    public T calculate(T num1, T num2, OperatorType type) throws  ArithmeticException {
+        Operator<T> operator = null;
 
         switch (type) {
             case ADD -> operator = new AddOperator<>();
@@ -17,7 +17,6 @@ public class ArithmeticCalculator<T extends Number> extends Calculator {
             case MULTIPLY -> operator = new MultiplyOperator<>();
             case DIVIDE -> operator = new DivideOperator<>();
             case MOD -> operator = new ModOperator<>();
-            default -> throw new Exception("잘못된 기호");
         }
 
         T result = operator.operate(num1, num2);
@@ -29,6 +28,5 @@ public class ArithmeticCalculator<T extends Number> extends Calculator {
         getList().stream()
                 .filter(value -> value > input)
                 .forEach(System.out::println);
-//                .forEach(value -> System.out.println("연산결관 = " + value));
     }
 }

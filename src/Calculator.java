@@ -7,20 +7,19 @@ public abstract class Calculator {
         this.list = list;
     }
 
-    // list 전체 출력
     public void inquiryList() {
         int index = 1;
-        for (double data : getList()) {
+        for (double data : list) {
             System.out.println((index++) + "번째: " + data);
         }
     }
 
-    // list의 첫번째 데이터 삭제
     public void removeData(int num) {
-        list.remove(num);
+        if (!list.isEmpty()) {
+            list.remove(num);
+        }
     }
 
-    // list에 추가
     public void addList(double data) {
         list.add(data);
     }
