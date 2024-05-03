@@ -16,8 +16,8 @@ public abstract class Calculator {
     }
 
     // list의 첫번째 데이터 삭제
-    public void removeFirstData() {
-        list.remove(0);
+    public void removeData(int num) {
+        list.remove(num);
     }
 
     // list에 추가

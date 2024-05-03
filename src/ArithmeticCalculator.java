@@ -29,5 +29,6 @@ public class ArithmeticCalculator<T extends Number> extends Calculator {
         getList().stream()
                 .filter(value -> value > input)
                 .forEach(System.out::println);
+//                .forEach(value -> System.out.println("연산결관 = " + value));
     }
 }
