@@ -28,20 +28,24 @@ public class App {
         System.out.print("사칙연산 기호를 입력하세요: ");
         char operation = sc.next().charAt(0);
 
-        cal2.calculate(num1, num2, OperatorType.setOperation(operation));
+        double calculate = cal2.calculate(num1, num2, OperatorType.setOperation(operation));
+        cal2.getList().add(calculate);
 
-        System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제)");
+        System.out.print("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제) ");
         if ("remove".equals(sc.next())) {
             cal2.removeFirstData();
         }
 
-        System.out.println("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회)");
+        System.out.print("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회) ");
         if ("inquiry".equals(sc.next())) {
             cal2.inquiryList();
         }
 
-        System.out.println("입력한 값 보다 큰 값들 출력 (x 입력 시 조회안함)");
-        cal2.printValuesBiggerInput(sc.nextDouble());
+        System.out.print("입력한 값 보다 큰 값들 출력 (lambda 입력 시 조회) ");
+        if ("lambda".equals(sc.next())) {
+            System.out.print("기준 값을 입력하세요: ");
+            cal2.printValuesBiggerInput(sc.nextDouble());
+        }
     }
 
     private static void calculateCircleArea(Scanner sc, CircleCalculator cal1) {

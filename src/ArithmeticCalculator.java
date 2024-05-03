@@ -8,7 +8,7 @@ public class ArithmeticCalculator<T extends Number> extends Calculator {
         super(list);
     }
 
-    public double calculate(T num1, T num2, OperatorType type) throws Exception {
+    public T calculate(T num1, T num2, OperatorType type) throws Exception {
         Operator<T> operator;
 
         switch (type) {
@@ -20,15 +20,14 @@ public class ArithmeticCalculator<T extends Number> extends Calculator {
             default -> throw new Exception("잘못된 기호");
         }
 
-        double result = operator.operate(num1, num2);
-        addList(result);
+        T result = operator.operate(num1, num2);
         return result;
     }
 
-    public void printValuesBiggerInput(T input) {
+    public void printValuesBiggerInput(double input) {
         System.out.println(input + "보다 큰 값");
         getList().stream()
-                .filter(value -> value > input.doubleValue())
+                .filter(value -> value > input)
                 .forEach(System.out::println);
     }
 }
